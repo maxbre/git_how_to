@@ -100,13 +100,29 @@ img {
 <pre><code>git commit -m &quot;here specify a short message about changes&quot;</code></pre>
 <p>the <em>commit</em> records the snapshot set up in the staging process</p>
 </div>
-<div id="add-a-remote-repository" class="section level1">
-<h1>add a remote repository</h1>
-<pre><code>git remote add git://github.com/some_owner/some_repository.git</code></pre>
+<div id="add-a-remote-repository-from-command-line" class="section level1">
+<h1>add a remote repository from command line</h1>
+<pre><code>git remote add origin git://github.com/some_owner/some_repository.git</code></pre>
 </div>
 <div id="push-to-remotes" class="section level1">
 <h1>push to remotes</h1>
-<pre><code>git push origin master</code></pre>
+<pre><code>git push -u origin master</code></pre>
+</div>
+<div id="create-a-new-repository-on-the-command-line" class="section level1">
+<h1>…create a new repository on the command line</h1>
+<p>THIS PART MUST BE WORKED OUT &amp; REVIEWED…</p>
+<pre><code>echo &quot;# git_how_to&quot; &gt;&gt; README.md
+git init
+git add README.md
+git commit -m &quot;first commit&quot;
+git remote add origin https://github.com/maxbre/git_how_to.git
+git push -u origin master
+</code></pre>
+</div>
+<div id="check-remote-repository" class="section level1">
+<h1>…check remote repository</h1>
+<p>THIS PART MUST BE WORKED OUT &amp; REVIEWED…</p>
+<pre><code>git remote -v</code></pre>
 </div>
 
 

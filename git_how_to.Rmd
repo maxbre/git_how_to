@@ -61,19 +61,40 @@ git commit -m "here specify a short message about changes"
 the *commit* records the snapshot set up in the staging process
 
 
-# add a remote repository
+# add a remote repository from command line
 
 ```
-git remote add git://github.com/some_owner/some_repository.git
+git remote add origin git://github.com/some_owner/some_repository.git
 ```
 
 
 # push to remotes
 
 ```
-git push origin master
+git push -u origin master
 ```
 
 
+# ...create a new repository on the command line
 
+THIS PART MUST BE WORKED OUT & REVIEWED...
+
+```
+echo "# git_how_to" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/maxbre/git_how_to.git
+git push -u origin master
+
+```
+
+
+# ...check remote repository
+
+THIS PART MUST BE WORKED OUT & REVIEWED...
+
+```
+git remote -v
+```
 
