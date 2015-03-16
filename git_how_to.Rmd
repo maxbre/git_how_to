@@ -1,0 +1,79 @@
+
+# initialize a new repository
+
+```
+git init
+```
+this command creates a new subdirectory named *.git* inside an existing working directory
+
+remember that at this point nothing in the project is tracked yet
+
+
+
+# clone an existing repository
+
+```
+git clone git://github.com/some_owner/some_repository.git
+```
+
+this command does the following:
+
+- creates a directory named *some_repository*
+- initializes a *.git* directory inside it
+- pulls down all the data from the existing repository
+- checks out a working copy of latest version
+
+what follows is a variation upon the previous command:
+
+```
+git clone git://github.com/some_owner/some_repository.git my_repository
+```
+it does the same things as before **but**  the target directory is now *my_repository*
+
+# check status of the repository
+
+it is always a good practice to check the status of the files inside the repository and this is simply done by issuing the following command:
+
+```
+git status
+```
+
+the returned messages give some feedback on what is needed next
+
+# track (add) new files
+
+```
+git add a_new_filename
+```
+
+# stage (add) modified files
+
+```
+git add a_modified_filename
+```
+
+# commit changes
+
+```
+git commit -m "here specify a short message about changes"
+```
+
+the *commit* records the snapshot set up in the staging process
+
+
+# add a remote repository
+
+```
+git remote add git://github.com/some_owner/some_repository.git
+```
+
+
+# push to remotes
+
+```
+git push origin master
+```
+
+
+
+
