@@ -32,7 +32,9 @@ it does the same things as before **but**  the target directory is now *my_repos
 
 # check status of the repository
 
-it is always a good practice to check the status of the files inside the repository and this is simply done by issuing the following command:
+it is always a good practice to check the status of the files inside the repository
+
+this is simply done by issuing the following command:
 
 ```
 git status
@@ -74,27 +76,24 @@ git remote add origin git://github.com/some_owner/some_repository.git
 git push -u origin master
 ```
 
-
-# ...create a new repository on the command line
-
-THIS PART MUST BE WORKED OUT & REVIEWED...
+# check remote repository
 
 ```
-echo "# git_how_to" >> README.md
+git remote -v
+```
+
+
+# workflow example
+
+```
+echo "#my_title" >> README.md
 git init
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/maxbre/git_how_to.git
+git remote add origin git://github.com/some_owner/some_repository.git
 git push -u origin master
 
 ```
 
 
-# ...check remote repository
-
-THIS PART MUST BE WORKED OUT & REVIEWED...
-
-```
-git remote -v
-```
 

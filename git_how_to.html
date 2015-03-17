@@ -83,7 +83,8 @@ img {
 </div>
 <div id="check-status-of-the-repository" class="section level1">
 <h1>check status of the repository</h1>
-<p>it is always a good practice to check the status of the files inside the repository and this is simply done by issuing the following command:</p>
+<p>it is always a good practice to check the status of the files inside the repository</p>
+<p>this is simply done by issuing the following command:</p>
 <pre><code>git status</code></pre>
 <p>the returned messages give some feedback on what is needed next</p>
 </div>
@@ -108,21 +109,19 @@ img {
 <h1>push to remotes</h1>
 <pre><code>git push -u origin master</code></pre>
 </div>
-<div id="create-a-new-repository-on-the-command-line" class="section level1">
-<h1>…create a new repository on the command line</h1>
-<p>THIS PART MUST BE WORKED OUT &amp; REVIEWED…</p>
-<pre><code>echo &quot;# git_how_to&quot; &gt;&gt; README.md
+<div id="check-remote-repository" class="section level1">
+<h1>check remote repository</h1>
+<pre><code>git remote -v</code></pre>
+</div>
+<div id="workflow-example" class="section level1">
+<h1>workflow example</h1>
+<pre><code>echo &quot;#my_title&quot; &gt;&gt; README.md
 git init
 git add README.md
 git commit -m &quot;first commit&quot;
-git remote add origin https://github.com/maxbre/git_how_to.git
+git remote add origin git://github.com/some_owner/some_repository.git
 git push -u origin master
 </code></pre>
-</div>
-<div id="check-remote-repository" class="section level1">
-<h1>…check remote repository</h1>
-<p>THIS PART MUST BE WORKED OUT &amp; REVIEWED…</p>
-<pre><code>git remote -v</code></pre>
 </div>
 
 
