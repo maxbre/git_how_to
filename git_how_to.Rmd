@@ -1,3 +1,9 @@
+# LCA of GIT files 
+
+
+![LCA](./LCA_files_crop.png)
+
+*****
 
 ## initialize a new repository
 
@@ -95,7 +101,7 @@ git push -u origin master
 ******
 
 ## workflow example 2
-### clone repository, add and commit files, push to remote
+### clone repository, add and commit files, push back to remote
 
 ```
 git clone git://github.com/some_owner/some_repository.git
