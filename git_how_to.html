@@ -61,14 +61,14 @@ img {
 
 
 
-<div id="initialize-a-new-repository" class="section level1">
-<h1>initialize a new repository</h1>
+<div id="initialize-a-new-repository" class="section level2">
+<h2>initialize a new repository</h2>
 <pre><code>git init</code></pre>
-<p>this command creates a new subdirectory named <em>.git</em> inside an existing working directory</p>
+<p>this command creates a new sub-directory named <em>.git</em> inside an existing working directory</p>
 <p>remember that at this point nothing in the project is tracked yet</p>
 </div>
-<div id="clone-an-existing-repository" class="section level1">
-<h1>clone an existing repository</h1>
+<div id="clone-an-existing-repository" class="section level2">
+<h2>clone an existing repository</h2>
 <pre><code>git clone git://github.com/some_owner/some_repository.git</code></pre>
 <p>this command does the following:</p>
 <ul>
@@ -81,40 +81,43 @@ img {
 <pre><code>git clone git://github.com/some_owner/some_repository.git my_repository</code></pre>
 <p>it does the same things as before <strong>but</strong> the target directory is now <em>my_repository</em></p>
 </div>
-<div id="check-status-of-the-repository" class="section level1">
-<h1>check status of the repository</h1>
+<div id="check-status-of-files" class="section level2">
+<h2>check status of files</h2>
 <p>it is always a good practice to check the status of the files inside the repository</p>
 <p>this is simply done by issuing the following command:</p>
 <pre><code>git status</code></pre>
 <p>the returned messages give some feedback on what is needed next</p>
 </div>
-<div id="track-add-new-files" class="section level1">
-<h1>track (add) new files</h1>
+<div id="track-add-new-files" class="section level2">
+<h2>track (add) new files</h2>
 <pre><code>git add a_new_filename</code></pre>
 </div>
-<div id="stage-add-modified-files" class="section level1">
-<h1>stage (add) modified files</h1>
+<div id="stage-add-modified-files" class="section level2">
+<h2>stage (add) modified files</h2>
 <pre><code>git add a_modified_filename</code></pre>
 </div>
-<div id="commit-changes" class="section level1">
-<h1>commit changes</h1>
+<div id="commit-the-changes" class="section level2">
+<h2>commit the changes</h2>
 <pre><code>git commit -m &quot;here specify a short message about changes&quot;</code></pre>
 <p>the <em>commit</em> records the snapshot set up in the staging process</p>
 </div>
-<div id="add-a-remote-repository-from-command-line" class="section level1">
-<h1>add a remote repository from command line</h1>
+<div id="add-a-remote-repository-from-command-line" class="section level2">
+<h2>add a remote repository from command line</h2>
 <pre><code>git remote add origin git://github.com/some_owner/some_repository.git</code></pre>
 </div>
-<div id="push-to-remotes" class="section level1">
-<h1>push to remotes</h1>
+<div id="push-to-remotes" class="section level2">
+<h2>push to remotes</h2>
 <pre><code>git push -u origin master</code></pre>
 </div>
-<div id="check-remote-repository" class="section level1">
-<h1>check remote repository</h1>
+<div id="check-remote-repository" class="section level2">
+<h2>check remote repository</h2>
 <pre><code>git remote -v</code></pre>
+<hr />
 </div>
-<div id="workflow-example" class="section level1">
-<h1>workflow example</h1>
+<div id="workflow-example-1" class="section level2">
+<h2>workflow example 1</h2>
+<div id="new-repository-initialize-add-and-commit-files-add-origin-push-to-remote" class="section level3">
+<h3>new repository, initialize, add and commit files, add origin, push to remote</h3>
 <pre><code>echo &quot;#my_title&quot; &gt;&gt; README.md
 git init
 git add README.md
@@ -122,6 +125,19 @@ git commit -m &quot;first commit&quot;
 git remote add origin git://github.com/some_owner/some_repository.git
 git push -u origin master
 </code></pre>
+<hr />
+</div>
+</div>
+<div id="workflow-example-2" class="section level2">
+<h2>workflow example 2</h2>
+<div id="clone-repository-add-and-commit-files-push-to-remote" class="section level3">
+<h3>clone repository, add and commit files, push to remote</h3>
+<pre><code>git clone git://github.com/some_owner/some_repository.git
+echo &quot;#new_file&quot; &gt;&gt; new_file.md
+git add new_file.md
+git commit -m &quot;add new_file.md&quot;
+git push -u origin master</code></pre>
+</div>
 </div>
 
 
