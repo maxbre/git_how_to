@@ -1,5 +1,6 @@
-# LCA of GIT files 
+# LCA of GIT files by picture
 
+****
 
 ![LCA](./LCA_files_crop.png)
 
