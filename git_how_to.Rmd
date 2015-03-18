@@ -101,9 +101,8 @@ the returned messages give some feedback on what is next needed
 snapshot the new file for next versioning (commit)
 ```
 git add a_new_filename
-git add .
 ```
-that point after *git add* means all files present in the repository
+changes were add to the **index**
 
 ## stage (add) a modified file
 
@@ -142,7 +141,7 @@ git commit -m "here specify a short message about changes"
 ```
 
 the *commit* records the snapshot set up in the staging process
-
+file were committed to the **head* but not in your remote repository yet
 
 ## (straight) commit the changes without passing through staging
 
@@ -158,9 +157,10 @@ define a remote repository (namely: origin) at a specified url
 git remote add origin git://github.com/some_owner/some_repository.git
 ```
 
-## push to remotes
+## push from local to remote
 
-upload local commit to remote repository
+changes in the **head** of the local working copy are sent to the remote repository (upload local commit to remote repository)
+
 ```
 git push -u origin master
 ```
@@ -168,6 +168,8 @@ or just more simply
 ```
 git push
 ```
+
+
 ## check remote repository
 
 verify the name and address of remote repository
@@ -195,7 +197,7 @@ change the file name and prepare for commit
 git mv old_file_name new_file_name
 ```
 
-## pull from remote
+## pull from remote to local
 
 update local repository to the newest commit in the working directory to fetch and merge remote changes
 

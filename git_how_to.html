@@ -128,9 +128,8 @@ img {
 <div id="track-add-a-new-file" class="section level2">
 <h2>track (add) a new file</h2>
 <p>snapshot the new file for next versioning (commit)</p>
-<pre><code>git add a_new_filename
-git add .</code></pre>
-<p>that point after <em>git add</em> means all files present in the repository</p>
+<pre><code>git add a_new_filename</code></pre>
+<p>changes were add to the <strong>index</strong></p>
 </div>
 <div id="stage-add-a-modified-file" class="section level2">
 <h2>stage (add) a modified file</h2>
@@ -154,7 +153,7 @@ git add .</code></pre>
 <h2>commit the changes</h2>
 <p>record file snapshot permanently in version history</p>
 <pre><code>git commit -m &quot;here specify a short message about changes&quot;</code></pre>
-<p>the <em>commit</em> records the snapshot set up in the staging process</p>
+<p>the <em>commit</em> records the snapshot set up in the staging process file were committed to the **head* but not in your remote repository yet</p>
 </div>
 <div id="straight-commit-the-changes-without-passing-through-staging" class="section level2">
 <h2>(straight) commit the changes without passing through staging</h2>
@@ -168,7 +167,7 @@ git add .</code></pre>
 </div>
 <div id="push-to-remotes" class="section level2">
 <h2>push to remotes</h2>
-<p>upload local commit to remote repository</p>
+<p>changes in the <strong>head</strong> of the local working copy are sent to the remote repository (upload local commit to remote repository)</p>
 <pre><code>git push -u origin master</code></pre>
 <p>or just more simply</p>
 <pre><code>git push</code></pre>
