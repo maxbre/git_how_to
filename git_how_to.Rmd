@@ -64,21 +64,45 @@ it is always a good practice to check the status of the files inside the reposit
 ```
 git status
 ```
-the returned messages give some feedback on what is needed next
+the returned messages give some feedback on what is next needed
 
-## track (add) new files
+## track (add) a new file
 
 snapshot the new file for next versioning (commit)
 ```
 git add a_new_filename
+git add .
 ```
+that point after *git add* means all files present in the repository
 
-## stage (add) modified files
+## stage (add) a modified file
 
 snapshot the edited file for next history versioning (i.e. commit)
 ```
 git add a_modified_filename
+
 ```
+## stage multiple files
+
+some *"almost"*  equivalent forms of the same *add* command dealing with multiple files
+
+```
+git add -A     
+```
+stages all, i.e. a handy shortcut for doing both following staging
+
+```
+git add .
+
+```
+stages new and modified, without deleted
+
+```
+git add -u
+```
+stages modified and deleted, without new
+
+for further reference see: http://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add
 
 ## commit the changes
 
@@ -89,6 +113,13 @@ git commit -m "here specify a short message about changes"
 
 the *commit* records the snapshot set up in the staging process
 
+
+## (straight) commit the changes without passing through staging
+
+it's not necessary to *git add* before the commit
+```
+git commit -a -m "here specify a short message about this commit"
+```
 
 ## add a remote repository from command line
 
@@ -135,7 +166,7 @@ git mv old_file_name new_file_name
 ******
 
 ## workflow example 1
-### new repository, initialize, add and commit files, add origin, push to remote
+new repository: initialize, add and commit files, add origin, push to remote
 
 ```
 echo "#my_title" >> README.md
@@ -149,7 +180,7 @@ git push -u origin master
 ******
 
 ## workflow example 2
-### clone repository, add and commit files, push back to remote
+clone repository: add and commit files, push back to remote
 
 ```
 git clone git://github.com/some_owner/some_repository.git

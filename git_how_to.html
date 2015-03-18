@@ -103,23 +103,43 @@ img {
 <p>lists new or edited files to be committed</p>
 <p>it is always a good practice to check the status of the files inside the repository: this is simply done by issuing the following command:</p>
 <pre><code>git status</code></pre>
-<p>the returned messages give some feedback on what is needed next</p>
+<p>the returned messages give some feedback on what is next needed</p>
 </div>
-<div id="track-add-new-files" class="section level2">
-<h2>track (add) new files</h2>
+<div id="track-add-a-new-file" class="section level2">
+<h2>track (add) a new file</h2>
 <p>snapshot the new file for next versioning (commit)</p>
-<pre><code>git add a_new_filename</code></pre>
+<pre><code>git add a_new_filename
+git add .</code></pre>
+<p>that point after <em>git add</em> means all files present in the repository</p>
 </div>
-<div id="stage-add-modified-files" class="section level2">
-<h2>stage (add) modified files</h2>
+<div id="stage-add-a-modified-file" class="section level2">
+<h2>stage (add) a modified file</h2>
 <p>snapshot the edited file for next history versioning (i.e. commit)</p>
-<pre><code>git add a_modified_filename</code></pre>
+<pre><code>git add a_modified_filename
+</code></pre>
+</div>
+<div id="stage-multiple-files" class="section level2">
+<h2>stage multiple files</h2>
+<p>some <em>“almost”</em> equivalent forms of the same <em>add</em> command dealing with multiple files</p>
+<pre><code>git add -A     </code></pre>
+<p>stages all, i.e. a handy shortcut for doing both following staging</p>
+<pre><code>git add .
+</code></pre>
+<p>stages new and modified, without deleted</p>
+<pre><code>git add -u</code></pre>
+<p>stages modified and deleted, without new</p>
+<p>for further reference see: <a href="http://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add">http://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add</a></p>
 </div>
 <div id="commit-the-changes" class="section level2">
 <h2>commit the changes</h2>
 <p>record file snapshot permanently in version history</p>
 <pre><code>git commit -m &quot;here specify a short message about changes&quot;</code></pre>
 <p>the <em>commit</em> records the snapshot set up in the staging process</p>
+</div>
+<div id="straight-commit-the-changes-without-passing-through-staging" class="section level2">
+<h2>(straight) commit the changes without passing through staging</h2>
+<p>it’s not necessary to <em>git add</em> before the commit</p>
+<pre><code>git commit -a -m &quot;here specify a short message about this commit&quot;</code></pre>
 </div>
 <div id="add-a-remote-repository-from-command-line" class="section level2">
 <h2>add a remote repository from command line</h2>
@@ -148,8 +168,7 @@ img {
 </div>
 <div id="workflow-example-1" class="section level2">
 <h2>workflow example 1</h2>
-<div id="new-repository-initialize-add-and-commit-files-add-origin-push-to-remote" class="section level3">
-<h3>new repository, initialize, add and commit files, add origin, push to remote</h3>
+<p>new repository: initialize, add and commit files, add origin, push to remote</p>
 <pre><code>echo &quot;#my_title&quot; &gt;&gt; README.md
 git init
 git add README.md
@@ -159,17 +178,14 @@ git push -u origin master
 </code></pre>
 <hr />
 </div>
-</div>
 <div id="workflow-example-2" class="section level2">
 <h2>workflow example 2</h2>
-<div id="clone-repository-add-and-commit-files-push-back-to-remote" class="section level3">
-<h3>clone repository, add and commit files, push back to remote</h3>
+<p>clone repository: add and commit files, push back to remote</p>
 <pre><code>git clone git://github.com/some_owner/some_repository.git
 echo &quot;#new_file&quot; &gt;&gt; new_file.md
 git add new_file.md
 git commit -m &quot;add new_file.md&quot;
 git push -u origin master</code></pre>
-</div>
 </div>
 </div>
 
