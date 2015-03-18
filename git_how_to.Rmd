@@ -9,14 +9,22 @@
 
 ## initialize a new repository
 
+create a new local repository with a given name
 ```
 git init
+```
+create a new local repository with a given name
+```
+git init project_name
+
 ```
 this command creates a new sub-directory named *.git* inside an existing working directory
 
 remember that at this point nothing in the project is tracked yet
 
 ## clone an existing repository
+
+downloads a project and its entire version history
 
 ```
 git clone git://github.com/some_owner/some_repository.git
@@ -37,10 +45,9 @@ git clone git://github.com/some_owner/some_repository.git my_repository
 it does the same things as before **but**  the target directory is now *my_repository*
 
 ## check status of files
+lists all new or modi???ed ???les to be committed
 
-it is always a good practice to check the status of the files inside the repository
-
-this is simply done by issuing the following command:
+it is always a good practice to check the status of the files inside the repository: this is simply done by issuing the following command:
 
 ```
 git status

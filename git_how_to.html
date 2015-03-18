@@ -71,12 +71,17 @@ img {
 </div>
 <div id="initialize-a-new-repository" class="section level2">
 <h2>initialize a new repository</h2>
+<p>create a new local repository with a given name</p>
 <pre><code>git init</code></pre>
+<p>create a new local repository with a given name</p>
+<pre><code>git init project_name
+</code></pre>
 <p>this command creates a new sub-directory named <em>.git</em> inside an existing working directory</p>
 <p>remember that at this point nothing in the project is tracked yet</p>
 </div>
 <div id="clone-an-existing-repository" class="section level2">
 <h2>clone an existing repository</h2>
+<p>downloads a project and its entire version history</p>
 <pre><code>git clone git://github.com/some_owner/some_repository.git</code></pre>
 <p>this command does the following:</p>
 <ul>
@@ -91,8 +96,8 @@ img {
 </div>
 <div id="check-status-of-files" class="section level2">
 <h2>check status of files</h2>
-<p>it is always a good practice to check the status of the files inside the repository</p>
-<p>this is simply done by issuing the following command:</p>
+<p>lists all new or modi???ed ???les to be committed</p>
+<p>it is always a good practice to check the status of the files inside the repository: this is simply done by issuing the following command:</p>
 <pre><code>git status</code></pre>
 <p>the returned messages give some feedback on what is needed next</p>
 </div>
