@@ -4,6 +4,24 @@
 
 ![LCA](./LCA_files_crop.png)
 
+
+figure freely inspired by: *"Pro Git"*  by Scott Chacon
+
+*****
+
+# workflow scheme
+
+![workflow](./workflow_crop.png)
+
+local repository consists of 3 "trees" maintained by git. 
+
+1. the **working directory** holding the files
+2. the **index** playing as a stage area 
+3. the **head** pointing to the last commit made
+
+
+figure re-drawn upon the original model: http://rogerdudler.github.io/git-guide/
+
 *****
 
 ## configure user info for all local repositories
@@ -33,7 +51,7 @@ this command creates a new sub-directory named *.git* inside an existing working
 
 remember that at this point nothing in the project is tracked yet
 
-## clone an existing repository
+## clone a remote existing repository
 
 downloads a project and its entire version history
 
@@ -55,9 +73,21 @@ git clone git://github.com/some_owner/some_repository.git my_repository
 ```
 it does the same things as before **but**  the target directory is now *my_repository*
 
+
+## clone a local existing repository
+
+```
+git clone path/to/local/repository
+```
+it creates a copy of a local repository
+
 ## check status of files
 
 lists new or edited files to be committed
+
+
+check this
+http://rogerdudler.github.io/git-guide/
 
 it is always a good practice to check the status of the files inside the repository: this is simply done by issuing the following command:
 
@@ -189,3 +219,7 @@ git add new_file.md
 git commit -m "add new_file.md"
 git push -u origin master
 ```
+
+
+
+
