@@ -1,11 +1,22 @@
 # LCA of a GIT file
-###a picture
 
 ****
 
 ![LCA](./LCA_files_crop.png)
 
 *****
+
+## configure user info for all local repositories
+
+set name to be attached to commit transactions
+```
+git config --global user.name "my_name"
+```
+
+set email to be attached to commit transactions
+```
+git config --global user.email "my_email"
+```
 
 ## initialize a new repository
 
@@ -57,18 +68,21 @@ the returned messages give some feedback on what is needed next
 
 ## track (add) new files
 
+snapshot the new file for next versioning (commit)
 ```
 git add a_new_filename
 ```
 
 ## stage (add) modified files
 
+snapshot the edited file for next history versioning (i.e. commit)
 ```
 git add a_modified_filename
 ```
 
 ## commit the changes
 
+record file snapshot permanently in version history
 ```
 git commit -m "here specify a short message about changes"
 ```
@@ -78,18 +92,21 @@ the *commit* records the snapshot set up in the staging process
 
 ## add a remote repository from command line
 
+define a remote repository (namely: origin) at a specified url
 ```
 git remote add origin git://github.com/some_owner/some_repository.git
 ```
 
 ## push to remotes
 
+upload local commit to remote repository
 ```
 git push -u origin master
 ```
 
 ## check remote repository
 
+verify the name and address of remote repository
 ```
 git remote -v
 ```
