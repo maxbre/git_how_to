@@ -96,7 +96,7 @@ img {
 </div>
 <div id="check-status-of-files" class="section level2">
 <h2>check status of files</h2>
-<p>lists all new or modi???ed ???les to be committed</p>
+<p>lists new or edited files to be committed</p>
 <p>it is always a good practice to check the status of the files inside the repository: this is simply done by issuing the following command:</p>
 <pre><code>git status</code></pre>
 <p>the returned messages give some feedback on what is needed next</p>
@@ -125,6 +125,15 @@ img {
 <div id="check-remote-repository" class="section level2">
 <h2>check remote repository</h2>
 <pre><code>git remote -v</code></pre>
+</div>
+<div id="relocate-and-remove-tracked-files" class="section level2">
+<h2>relocate and remove tracked files</h2>
+<p>delete the file from the working directory and stage the deletion</p>
+<pre><code>git rm file_name</code></pre>
+<p>delete the file from version control but preserve the file locally</p>
+<pre><code>git rm --cached file_name</code></pre>
+<p>change the file name and prepare for commit</p>
+<pre><code>git mv old_file_name new_file_name</code></pre>
 <hr />
 </div>
 <div id="workflow-example-1" class="section level2">

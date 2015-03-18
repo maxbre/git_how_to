@@ -45,7 +45,8 @@ git clone git://github.com/some_owner/some_repository.git my_repository
 it does the same things as before **but**  the target directory is now *my_repository*
 
 ## check status of files
-lists all new or modi???ed ???les to be committed
+
+lists new or edited files to be committed
 
 it is always a good practice to check the status of the files inside the repository: this is simply done by issuing the following command:
 
@@ -92,6 +93,27 @@ git push -u origin master
 ```
 git remote -v
 ```
+
+## relocate and remove tracked files
+
+delete the file from the working directory and stage the deletion
+
+```
+git rm file_name
+```
+
+delete the file from version control but preserve the file locally
+
+```
+git rm --cached file_name
+```
+
+change the file name and prepare for commit
+
+```
+git mv old_file_name new_file_name
+```
+
 
 ******
 
