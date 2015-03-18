@@ -13,7 +13,7 @@ figure freely inspired by: *"Pro Git"*  by Scott Chacon
 
 ![workflow](./workflow_crop.png)
 
-local repository consists of 3 "trees" maintained by git. 
+local repository consists of 3 strucrtures ("trees") maintained through and managed by git 
 
 1. the **working directory** holding the files
 2. the **index** playing as a stage area 
@@ -38,16 +38,20 @@ git config --global user.email "my_email"
 
 ## initialize a new repository
 
-create a new local repository with a given name
+create a new local repository and then...
 ```
 git init
 ```
-create a new local repository with a given name
+this creates a new git repository
+
+or create a new local repository and then...
 ```
 git init project_name
 
 ```
-this command creates a new sub-directory named *.git* inside an existing working directory
+this creates a new git repository with a given name
+
+this command creates a new sub-directory named *.git* inside the existing working directory
 
 remember that at this point nothing in the project is tracked yet
 
@@ -84,10 +88,6 @@ it creates a copy of a local repository
 ## check status of files
 
 lists new or edited files to be committed
-
-
-check this
-http://rogerdudler.github.io/git-guide/
 
 it is always a good practice to check the status of the files inside the repository: this is simply done by issuing the following command:
 
@@ -164,7 +164,10 @@ upload local commit to remote repository
 ```
 git push -u origin master
 ```
-
+or just more simply
+```
+git push
+```
 ## check remote repository
 
 verify the name and address of remote repository
@@ -192,7 +195,13 @@ change the file name and prepare for commit
 git mv old_file_name new_file_name
 ```
 
+## pull from remote
 
+update local repository to the newest commit in the working directory to fetch and merge remote changes
+
+```
+git pull
+```
 ******
 
 ## workflow example 1
