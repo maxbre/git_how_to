@@ -92,8 +92,7 @@ img {
 <pre><code>git init</code></pre>
 <p>this creates a new git repository</p>
 <p>or create a new local repository and then…</p>
-<pre><code>git init project_name
-</code></pre>
+<pre><code>git init project_name</code></pre>
 <p>this creates a new git repository with a given name</p>
 <p>this command creates a new sub-directory named <em>.git</em> inside the existing working directory</p>
 <p>remember that at this point nothing in the project is tracked yet</p>
@@ -134,16 +133,14 @@ img {
 <div id="stage-add-a-modified-file" class="section level2">
 <h2>stage (add) a modified file</h2>
 <p>snapshot the edited file for next history versioning (i.e. commit)</p>
-<pre><code>git add a_modified_filename
-</code></pre>
+<pre><code>git add a_modified_filename</code></pre>
 </div>
 <div id="stage-multiple-files" class="section level2">
 <h2>stage multiple files</h2>
 <p>some <em>“almost”</em> equivalent forms of the same <em>add</em> command dealing with multiple files</p>
 <pre><code>git add -A     </code></pre>
 <p>stages all, i.e. a handy shortcut for doing both following staging</p>
-<pre><code>git add .
-</code></pre>
+<pre><code>git add .</code></pre>
 <p>stages new and modified, without deleted</p>
 <pre><code>git add -u</code></pre>
 <p>stages modified and deleted, without new</p>
@@ -165,8 +162,8 @@ img {
 <p>define a remote repository (namely: origin) at a specified url</p>
 <pre><code>git remote add origin git://github.com/some_owner/some_repository.git</code></pre>
 </div>
-<div id="push-to-remotes" class="section level2">
-<h2>push to remotes</h2>
+<div id="push-from-local-to-remote" class="section level2">
+<h2>push from local to remote</h2>
 <p>changes in the <strong>head</strong> of the local working copy are sent to the remote repository (upload local commit to remote repository)</p>
 <pre><code>git push -u origin master</code></pre>
 <p>or just more simply</p>
@@ -186,8 +183,8 @@ img {
 <p>change the file name and prepare for commit</p>
 <pre><code>git mv old_file_name new_file_name</code></pre>
 </div>
-<div id="pull-from-remote" class="section level2">
-<h2>pull from remote</h2>
+<div id="pull-from-remote-to-local" class="section level2">
+<h2>pull from remote to local</h2>
 <p>update local repository to the newest commit in the working directory to fetch and merge remote changes</p>
 <pre><code>git pull</code></pre>
 <hr />
