@@ -1,4 +1,5 @@
-# my little reminder about some git basics
+# my little reminder about some git basics 
+# (just scarping the surface!)
 
 ****
 

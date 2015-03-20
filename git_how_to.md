@@ -1,10 +1,16 @@
-# LCA of a GIT file
+# LCA of a GIT file 
 
 ****
 
 ![LCA](./LCA_files_crop.png)
 
-figure freely inspired by: *"Pro Git"*  by Scott Chacon
+**untracked**: a new file not present in the previous snapshot (commit)
+
+**tracked**: a file ready to be included in the snapshot (commit)
+
+the need of such a distinction for the file status (tracked vs. untracked) is a "safe rule" to avoid committing in the snapshot files that were not intended to be included (with the term snapshot it is here intended a certain "picture" of some file configuration of a given repository)
+
+the figure is freely inspired by: *"Pro Git"*  by Scott Chacon
 
 *****
 
@@ -18,7 +24,7 @@ local repository consists of 3 strucrtures ("trees") maintained through and mana
 2. the **index** playing as a stage area 
 3. the **head** pointing to the last commit made
 
-figure re-drawn upon the originals taken from http://rogerdudler.github.io/git-guide/ 
+the figure is re-drawn upon the original taken from http://rogerdudler.github.io/git-guide/ 
 
 *****
 
@@ -138,7 +144,7 @@ git commit -m "here specify a short message about changes"
 the *commit* records the snapshot set up in the staging process
 file were committed to the **head* but not in your remote repository yet
 
-## (straight) commit the changes without passing through staging
+## (straight) commit the changes without passing through the stage
 
 it's not necessary to *git add* before the commit
 ```
