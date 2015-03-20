@@ -4,7 +4,6 @@
 
 ![LCA](./LCA_files_crop.png)
 
-
 figure freely inspired by: *"Pro Git"*  by Scott Chacon
 
 *****
@@ -19,8 +18,7 @@ local repository consists of 3 strucrtures ("trees") maintained through and mana
 2. the **index** playing as a stage area 
 3. the **head** pointing to the last commit made
 
-
-figure re-drawn upon the original model: http://rogerdudler.github.io/git-guide/
+figure re-drawn upon the originals taken from http://rogerdudler.github.io/git-guide/ 
 
 *****
 
@@ -165,7 +163,6 @@ or just more simply
 ```
 git push
 ```
-
 
 ## check remote repository
 
