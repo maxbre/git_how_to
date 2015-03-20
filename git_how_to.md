@@ -88,7 +88,7 @@ git clone path/to/local/repository
 ```
 it creates a copy of a local repository
 
-## check status of files
+## check the status of files
 
 lists new or edited files to be committed
 
@@ -134,7 +134,7 @@ stages modified and deleted, without new
 
 for further reference see: http://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add
 
-## commit the changes
+## (normal) commit the changes after the stage
 
 record file snapshot permanently in version history
 ```
@@ -151,11 +151,11 @@ it's not necessary to *git add* before the commit
 git commit -a -m "here specify a short message about this commit"
 ```
 
-## add a remote repository from command line
+## add a remote repository from the command line
 
 define a remote repository (namely: origin) at a specified url
 ```
-git remote add origin git://github.com/some_owner/some_repository.git
+git remote add origin git://github.com/some_owner/some_renote_repository.git
 ```
 
 ## push from local to remote
@@ -206,7 +206,7 @@ git pull
 ```
 ******
 
-## workflow example 1
+## workflow example # 1
 new repository: initialize, add and commit files, add origin, push to remote
 
 ```
@@ -220,7 +220,7 @@ git push -u origin master
 ```
 ******
 
-## workflow example 2
+## workflow example # 2
 clone repository: add and commit files, push back to remote
 
 ```
