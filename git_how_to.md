@@ -1,6 +1,10 @@
-# LCA of a GIT file 
+# my little reminder...
+
+# ...about some git basics: just scarping the surface!
 
 ****
+
+# LCA of a GIT file
 
 ![LCA](./LCA_files_crop.png)
 
@@ -18,13 +22,13 @@ the figure is freely reinterpreted from: *"Pro Git"*  by Scott Chacon
 
 ![workflow](./workflow_crop.png)
 
-local repository consists of 3 strucrtures ("trees") maintained through and managed by git 
+local repository consists of 3 strucrtures ("trees") maintained through and managed by git
 
 1. the **working directory** holding the files
-2. the **index** playing as a stage area 
+2. the **index** playing as a stage area
 3. the **head** pointing to the last commit made
 
-the figure is re-drawn upon the original from http://rogerdudler.github.io/git-guide/ 
+the figure is re-drawn upon the original from http://rogerdudler.github.io/git-guide/
 
 *****
 
@@ -118,7 +122,7 @@ git add a_modified_filename
 some *"almost"*  equivalent forms of the same *add* command dealing with multiple files
 
 ```
-git add -A     
+git add -A
 ```
 stages all, i.e. a handy shortcut for doing both following staging
 
@@ -230,7 +234,3 @@ git add new_file.md
 git commit -m "add new_file.md"
 git push -u origin master
 ```
-
-
-
-

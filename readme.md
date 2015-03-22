@@ -1,7 +1,6 @@
-# my little reminder about some git basics 
-# (just scarping the surface!)
-
-****
+# my little reminder...
+***
+# ...about some git basics: just scarping the surface!
 
 freely inspired and somehow taken from:
 
