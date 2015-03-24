@@ -169,7 +169,13 @@ changes in the **head** of the local working copy are sent to the remote reposit
 ```
 git push -u origin master
 ```
-or just more simply
+that is git push <name_of_remote_repo> >name_of_remote_branch>
+
+by default the remote repository is called *origin*;
+to note that *origin* is an aliasing in the local system for a repository existing elsewhere (and that alias can be changed): when prompting a push the alias avoid having to type the whole URL
+
+or just more simply (if everything assumed by default is what you want/need!)
+
 ```
 git push
 ```
