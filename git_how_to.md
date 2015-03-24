@@ -176,7 +176,7 @@ git push
 
 ## check remote repository
 
-verify the name and address of remote repository
+verify the name and the address of remote repository
 ```
 git remote -v
 ```
@@ -208,6 +208,40 @@ update local repository to the newest commit in the working directory to fetch a
 ```
 git pull
 ```
+which is quivalent to issuing *git fetch* and then *git merge*
+
+# compare local against remote branch (check differences)
+
+```
+git fetch origin
+```
+to update the "remote-tracking-branches" which is typically origin/master (but not always so)
+
+```
+git diff master origin/master
+```
+to check the difference between the master (local) against the origin/master (remote)
+i.e. git diff <local branch> <remote>/<remote branch>
+
+# merge the differences
+
+```
+git merge origin/master
+```
+this is assuming master as the current branch
+
+# list of branches
+
+```
+git branch -r
+```
+check the state of branches in the remote repository
+
+```
+git branch -a
+```
+check both remote-tracking and local branches
+
 ******
 
 ## workflow example # 1
