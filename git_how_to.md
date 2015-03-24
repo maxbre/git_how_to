@@ -93,15 +93,15 @@ git clone path/to/local/repository
 ```
 creates a copy of a local repository
 
-## check the status of files
+## check the status of the repository
 
 ```
 git status
 ```
 lists new or edited files to be committed
 
-it is always a good practice to check the status of the files inside the repository: this is simply done by issuing the following command;
-the returned messages give some feedback on what is next needed
+it is always a good practice to check the status of the files inside the repository;
+the returned messages give some feedback on what is needed next
 
 ## track (add) a new file
 
@@ -142,7 +142,6 @@ for further reference see: http://stackoverflow.com/questions/572549/difference-
 
 ## (normal) commit the changes after the stage
 
-
 ```
 git commit -m "here specify a short message about changes"
 ```
@@ -152,7 +151,6 @@ the *commit* records the snapshot set up in the staging process
 file were committed to the **head* but not in your remote repository yet
 
 ## (straight) commit the changes without passing through the stage
-
 
 ```
 git commit -a -m "here specify a short message about this commit"

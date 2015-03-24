@@ -8,4 +8,4 @@ freely inspired and somehow taken from:
 
 - http://rogerdudler.github.io/git-guide/
 
-- and many other scattered on-line references  
+- and many other scattered on-line references
