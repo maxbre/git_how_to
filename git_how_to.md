@@ -244,17 +244,17 @@ this is assuming master as the current branch
 ```
 git branch
 ```
-list local branches
+lists local branches
 
 ```
 git branch -r
 ```
-list remote-tracking branches (in the remote repository)
+lists remote-tracking branches (in the remote repository)
 
 ```
 git branch -a
 ```
-list both remote-tracking and local branches
+lists both remote-tracking and local branches
 
 ******
 
