@@ -32,10 +32,12 @@ the figure is re-drawn upon the original from http://rogerdudler.github.io/git-g
 
 *****
 
-## two important things (among many others) to keep in mind
+## important words (among many others) to keep in mind
 
 - **master** is default name for a starting branch when you run *git init*
 - **origin** is default name for a remote when you run *git clone*
+- **repository** is a project folder containing all project files and their revision history
+- **branch** is a parallel version of a repository
 
 ## configure user info for all local repositories
 
