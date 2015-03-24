@@ -210,7 +210,7 @@ git pull
 ```
 which is quivalent to issuing *git fetch* and then *git merge*
 
-# compare local against remote branch (check differences)
+# compare the local against the remote branch (check differences)
 
 ```
 git fetch origin
@@ -230,17 +230,22 @@ git merge origin/master
 ```
 this is assuming master as the current branch
 
-# list of branches
+# list of branches (local, remote, all)
+
+```
+git branch
+```
+list local branches
 
 ```
 git branch -r
 ```
-check the state of branches in the remote repository
+list remote-tracking branches (in the remote repository)
 
 ```
 git branch -a
 ```
-check both remote-tracking and local branches
+list both remote-tracking and local branches
 
 ******
 
