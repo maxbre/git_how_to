@@ -216,7 +216,7 @@ git pull
 ```
 which is quivalent to issuing *git fetch* and then *git merge*
 
-# compare the local against the remote branch (check differences)
+## compare the local against the remote branch (check differences)
 
 ```
 git fetch origin
@@ -229,14 +229,14 @@ git diff master origin/master
 to check the difference between the master (local) against the origin/master (remote)
 i.e. git diff <local branch> <remote>/<remote branch>
 
-# merge the differences
+## merge the differences
 
 ```
 git merge origin/master
 ```
 this is assuming master as the current branch
 
-# list of branches (local, remote, all)
+## list of branches (local, remote, all)
 
 ```
 git branch
