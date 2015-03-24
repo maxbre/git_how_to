@@ -96,7 +96,7 @@ it creates a copy of a local repository
 
 lists new or edited files to be committed
 
-it is always a good practice to check the status of the files inside the repository: this is simply done by issuing the following command:
+it is always a good practice to check the status of the files inside the repository: this is simply done by issuing the following command
 
 ```
 git status
