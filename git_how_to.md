@@ -8,9 +8,9 @@
 
 ![LCA](./LCA_files_crop.png)
 
-**untracked**: a new file not present in the previous snapshot (commit)
+- **untracked**: a new file not present in the previous snapshot (commit)
 
-**tracked**: a file ready to be included in the snapshot (commit)
+- **tracked**: a file ready to be included in the snapshot (commit)
 
 the need of such a distinction for the file status (tracked vs. untracked) is a "safe rule" to avoid committing in the snapshot files that were not intended to be included (with the term snapshot it is here intended a certain "picture" of some file configuration of a given repository)
 
@@ -32,43 +32,44 @@ the figure is re-drawn upon the original from http://rogerdudler.github.io/git-g
 
 *****
 
+## two important things (among many others) to keep in mind
+
+- **master** is default name for a starting branch when you run *git init*
+- **origin** is default name for a remote when you run *git clone*
+
 ## configure user info for all local repositories
 
-set name to be attached to commit transactions
 ```
 git config --global user.name "my_name"
 ```
+set name to be attached to commit transactions
 
-set email to be attached to commit transactions
 ```
 git config --global user.email "my_email"
 ```
+set email to be attached to commit transactions
 
 ## initialize a new repository
 
-create a new local repository and then...
 ```
 git init
 ```
-this creates a new git repository
+creates a new git repository
 
-or create a new local repository and then...
 ```
 git init project_name
 ```
-this creates a new git repository with a given name
+creates a new git repository called "project_name"
 
-this command creates a new sub-directory named *.git* inside the existing working directory
-
+*git* creates a new sub-directory named *.git* inside the existing working directory;
 remember that at this point nothing in the project is tracked yet
 
 ## clone a remote existing repository
 
-downloads a project and its entire version history
-
 ```
 git clone git://github.com/some_owner/some_repository.git
 ```
+downloads a project and its entire version history
 
 this command does the following:
 
@@ -77,12 +78,12 @@ this command does the following:
 - pulls down all the data from the existing repository
 - checks out a working copy of latest version
 
-what follows is a variation upon the previous command:
+what follows is a variation upon the previous command
 
 ```
 git clone git://github.com/some_owner/some_repository.git my_repository
 ```
-it does the same things as before **but**  the target directory is now *my_repository*
+does the same things as before **but** the target directory is now "my_repository"
 
 
 ## clone a local existing repository
@@ -90,36 +91,37 @@ it does the same things as before **but**  the target directory is now *my_repos
 ```
 git clone path/to/local/repository
 ```
-it creates a copy of a local repository
+creates a copy of a local repository
 
 ## check the status of files
-
-lists new or edited files to be committed
-
-it is always a good practice to check the status of the files inside the repository: this is simply done by issuing the following command
 
 ```
 git status
 ```
+lists new or edited files to be committed
+
+it is always a good practice to check the status of the files inside the repository: this is simply done by issuing the following command;
 the returned messages give some feedback on what is next needed
 
 ## track (add) a new file
 
-snapshot the new file for next versioning (commit)
 ```
 git add a_new_filename
 ```
+snapshot the new file for next versioning (commit)
+
 changes were add to the **index**
 
 ## stage (add) a modified file
 
-snapshot the edited file for next history versioning (i.e. commit)
 ```
 git add a_modified_filename
 ```
+snapshot the edited file for next history versioning (i.e. commit)
+
 ## stage multiple files
 
-some *"almost"*  equivalent forms of the same *add* command dealing with multiple files
+here are some *"almost"*  equivalent forms of the same *add* command dealing with multiple files
 
 ```
 git add -A
@@ -140,80 +142,78 @@ for further reference see: http://stackoverflow.com/questions/572549/difference-
 
 ## (normal) commit the changes after the stage
 
-record file snapshot permanently in version history
+
 ```
 git commit -m "here specify a short message about changes"
 ```
+record file snapshot permanently in version history
 
 the *commit* records the snapshot set up in the staging process
 file were committed to the **head* but not in your remote repository yet
 
 ## (straight) commit the changes without passing through the stage
 
-it's not necessary to *git add* before the commit
+
 ```
 git commit -a -m "here specify a short message about this commit"
 ```
+it's not necessary to *git add* before the commit
 
 ## add a remote repository from the command line
 
-define a remote repository (namely: origin) at a specified url
 ```
 git remote add origin git://github.com/some_owner/some_renote_repository.git
 ```
+define a remote repository (namely: origin) at a specified url
 
 ## push from local to remote
-
-changes in the **head** of the local working copy are sent to the remote repository (upload local commit to remote repository)
 
 ```
 git push -u origin master
 ```
-that is git push <name_of_remote_repo> >name_of_remote_branch>
+changes in the **head** of the local working copy are sent to the remote repository (upload local commit to remote repository)
+
+i.e. git push "name_of_remote_repo" "name_of_remote_branch"
 
 by default the remote repository is called *origin*;
 to note that *origin* is an aliasing in the local system for a repository existing elsewhere (and that alias can be changed): when prompting a push the alias avoid having to type the whole URL
 
-or just more simply (if everything assumed by default is what you want/need!)
-
 ```
 git push
 ```
+more simply if everything assumed by default is what you want/need!
 
 ## check remote repository
 
-verify the name and the address of remote repository
 ```
 git remote -v
 ```
+verifies the name and the address of remote repository
 
 ## relocate and remove tracked files
-
-delete the file from the working directory and stage the deletion
 
 ```
 git rm file_name
 ```
-
-delete the file from version control but preserve the file locally
+deletes the file from the working directory and stage the deletion
 
 ```
 git rm --cached file_name
 ```
-
-change the file name and prepare for commit
+deletes the file from version control but preserve the file locally
 
 ```
 git mv old_file_name new_file_name
 ```
+changes the file name and prepare for commit
 
 ## pull from remote to local
-
-update local repository to the newest commit in the working directory to fetch and merge remote changes
 
 ```
 git pull
 ```
+updates local repository to the newest commit in the working directory to fetch and merge remote changes
+
 which is quivalent to issuing *git fetch* and then *git merge*
 
 ## compare the local against the remote branch (check differences)
@@ -221,13 +221,16 @@ which is quivalent to issuing *git fetch* and then *git merge*
 ```
 git fetch origin
 ```
-to update the "remote-tracking-branches" which is typically origin/master (but not always so)
+updates the "remote-tracking-branches" which is typically origin/master (but not always so);
+checks where is *origin* (i.e. in a remote server), fetches from it any data not yet present, updates local repository (database) and finally moves the origin/master pointer to the new up-to-date position
 
 ```
 git diff master origin/master
 ```
-to check the difference between the master (local) against the origin/master (remote)
-i.e. git diff <local branch> <remote>/<remote branch>
+i.e. git diff "local branch" "remote"/"remote branch"
+
+checks the difference between the master (local) against the origin/master (remote)
+
 
 ## merge the differences
 
@@ -265,7 +268,6 @@ git add README.md
 git commit -m "first commit"
 git remote add origin git://github.com/some_owner/some_repository.git
 git push -u origin master
-
 ```
 ******
 
