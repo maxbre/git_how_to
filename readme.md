@@ -1,6 +1,6 @@
 # my little reminder...
 ***
-# ...about some git basics: just scarping the surface!
+# ...about some git basics: just scraping the surface!
 
 freely inspired and somehow taken from:
 
@@ -8,4 +8,4 @@ freely inspired and somehow taken from:
 
 - http://rogerdudler.github.io/git-guide/
 
-- and many other scattered on-line references
+- and many other on-line scattered refs

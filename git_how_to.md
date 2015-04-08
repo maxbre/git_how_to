@@ -1,6 +1,6 @@
 # my little reminder...
 
-# ...about some git basics: just scarping the surface!
+# ...about some git basics: scraping the surface!
 
 ****
 
@@ -44,12 +44,12 @@ the figure is re-drawn upon the original from http://rogerdudler.github.io/git-g
 ```
 git config --global user.name "my_name"
 ```
-set name to be attached to commit transactions
+sets name to be attached to commit transactions
 
 ```
 git config --global user.email "my_email"
 ```
-set email to be attached to commit transactions
+sets email to be attached to commit transactions
 
 ## initialize a new repository
 
@@ -110,7 +110,7 @@ the returned messages give some feedback on what is needed next
 ```
 git add a_new_filename
 ```
-snapshot the new file for next versioning (commit)
+snapshots the new file for next versioning (commit)
 
 changes were add to the **index**
 
@@ -119,7 +119,7 @@ changes were add to the **index**
 ```
 git add a_modified_filename
 ```
-snapshot the edited file for next history versioning (i.e. commit)
+snapshots the edited file for next history versioning (i.e. commit)
 
 ## stage multiple files
 
@@ -147,7 +147,7 @@ for further reference see: http://stackoverflow.com/questions/572549/difference-
 ```
 git commit -m "here specify a short message about changes"
 ```
-record file snapshot permanently in version history
+records file snapshot permanently in version history
 
 the *commit* records the snapshot set up in the staging process
 file were committed to the **head* but not in your remote repository yet
@@ -164,7 +164,7 @@ it's not necessary to *git add* before the commit
 ```
 git remote add origin git://github.com/some_owner/some_renote_repository.git
 ```
-define a remote repository (namely: origin) at a specified url
+defines a remote repository (namely: origin) at a specified url
 
 ## push from local to remote
 
@@ -237,7 +237,7 @@ checks the difference between the master (local) against the origin/master (remo
 ```
 git merge origin/master
 ```
-this is assuming master as the current branch
+by assuming master as the current branch
 
 ## list of branches (local, remote, all)
 
